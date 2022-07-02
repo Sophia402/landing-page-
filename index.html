@@ -20,17 +20,26 @@
         <!-- NAVIGATION MENU -->
         <ul class="nav-links">
           <!-- NAVIGATION MENUS -->
-            <li class="sections">
-              <a href="/">Sections</a>
-              <!-- TOGGLE MENU -->
-              <ul class="toggle">
-                <li><a href="/">Section 1 </a></li>
-                <li><a href="/">Section 2</a></li>
-                <li><a href="/">Section 3</a></li>
-              </ul>
-            </li>
+          onclick="myFunction(scroll)">
+          </button>
+          <div id="navbar links">
           </div>
-        </ul>
+          <ul>
+            <li class="nav-item">
+              <a href="sction 1" class="nav-link" id="nav-link">section 1</a>
+            </li>
+            <li class="nav-item">
+              <a href="section 2" class="nav-link" id="nav-link">Section 2</a>
+            </li>
+            <li class="nav-item">
+              <a href="sction 3" class="nav-link" id="nav-link"
+                >Section 3</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="section 4" class="nav-link" id="nav-link">Sectin 4</a>
+            </li>
+    </ul>
     </nav>
   </header>
   <main>
@@ -65,12 +74,24 @@
         <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
       </div>
     </section>
+  </section>
+  <section id="section4" data-nav="Section 4">
+    <div class="landing__container">
+      <h2>Section 4</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+
+      <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+    </div>
+  </section>
   </main>
   <footer class="page__footer">
     <p>&copy Udacity</p>
-    <button onclick="topfunction(onclick)" class="sbtn"
-            id="sbtn"
-            title="go to top">Top</button>
+    <i class="scroll-up" id="scroll-up"
+     ><img
+       src="assets/icons/icons8-upward-arrow.png"
+       class="socicon up-arrow"
+       alt="up-arrow"
+/></i>
   </footer>
 
 </body>

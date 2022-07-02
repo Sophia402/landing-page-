@@ -19,6 +19,44 @@ ToggleBtnId.addEventListener("click", () => {
 CloseBtnId.addEventListener("click", (onclick) => {
  navId.classList.remove("show");
 });
+//adding funtion for active class
+function myFunction(scroll) {
+  var element=
+ document.getElementById(navbar_link);
+ element.classList.add("my-active-class")
+}
+// Mobile Menu
+
+menuBtn.onclick = function (){
+  navBar.classList.add("active");
+  menuBtn.style.opacity ="0";
+  menuBtn.style.pointerEvents = "none";
+  body.style.overflow = "hidden";
+}
+
+cancelBtn.onclick = function (){
+  navBar.classList.remove("active");
+  menuBtn.style.opacity ="1";
+  menuBtn.style.pointerEvents = "auto";
+  body.style.overflow = "auto";
+} 
+
+
+
+
+// Scroll Fixed
+window.onscroll = function (){
+  if(document.documentElement.scrollTop > 20){
+    nav.classList.add("sticky");
+    logoOne.classList.add("active");
+    menuBtn.classList.add("active");
+  }else{
+    nav.classList.remove("sticky");
+    logoOne.classList.remove("active");
+    menuBtn.classList.remove("active");
+  }
+
+
   /**
  * 
  * Manipulating the DOM exercise.
@@ -51,7 +89,15 @@ function scrollFunction(onscroll) {
     mybutton.style.display = "none";
   }
 }
+const scrollUp = document.querySelector("#scroll-up");
 
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
 // When the user clicks on the button, scroll to the top of the document
 function topFunction(onscroll) {
   document.body.scrollTop = 0; // For Safari
@@ -78,7 +124,22 @@ function topFunction(onscroll) {
 */
 
 // build the nav
+let nav = document.querySelector("nav"); 
+let body = document.querySelector("body");
+let navBar = document.querySelector(".navbar");
+let menuBtn = document.querySelector(".menu-btn");
+let cancelBtn = document.querySelector(".cancel-btn");
+// Side Navigation Bar Close While We click On Navigation Links
 
+let navLinks = document.querySelectorAll(".menu li a");
+for(var i = 0; i < navLinks.length; i++){
+  navLinks[i].addEventListener("click", function(){
+    navBar.classList.remove("active");
+    menuBtn.style.opacity ="1";
+    menuBtn.style.pointerEvents = "auto";
+    body.style.overflow = "auto";
+  })
+}
 
 // Add class 'active' to section when near top of viewport
 
@@ -96,6 +157,6 @@ function topFunction(onscroll) {
 
 // Scroll to section on link click
 
-// Set sections as active
+// Set sections as active{
 
-
+}

@@ -239,4 +239,48 @@ section.your-active-class .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
-}
+}.wrapper {
+    display: grid;
+    grid-template: (3, 1fr );
+    /* grid-template-areas: ( 3, 1fr);
+    grid-area: ( 3,1fr); */
+    gap: 19px;
+    grid-auto-rows:minmax ( 100px,auto);
+   }
+   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+   /* The navbar container */
+.navbar__menu {
+    overflow: hidden;
+    background-color: rgb(128, 48, 48);
+  }
+  
+  /* Navbar links */
+  .navbar__menu  {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration:solid;
+  }
+  
+  /* Links - change color on hover */
+  .navbar__menu:hover {
+    background-color: rgb(138, 59, 59);
+    color: rgb(58, 65, 129);
+  }
+  .scroll-up {
+    position: fixed;
+    right: 0.5%;
+    bottom: 3%;
+    cursor: pointer;
+  }
+  
+  .up-arrow {
+    width: 3rem;
+    height: 3rem;
+  }}
